@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuhv071minlj"]
+
+[ext_resource type="Script" path="res://scenes/npc_talk_with_input.gd" id="1_xhsha"]
+
+[node name="input_talk_npc" type="CharacterBody2D"]
+script = ExtResource("1_xhsha")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

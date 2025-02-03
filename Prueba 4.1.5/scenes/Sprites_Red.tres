@@ -1,0 +1,171 @@
+[gd_resource type="SpriteFrames" load_steps=14 format=3 uid="uid://bnu2isktrgu7i"]
+
+[ext_resource type="Texture2D" uid="uid://5w8ex2cka2pm" path="res://assets/Small-8-Direction-Characters_by_AxulArt.png" id="1_6cgk1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dy55d"]
+atlas = ExtResource("1_6cgk1")
+region = Rect2(0, 216, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dlvdp"]
+atlas = ExtResource("1_6cgk1")
+region = Rect2(0, 240, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5duha"]
+atlas = ExtResource("1_6cgk1")
+region = Rect2(0, 264, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtyh5"]
+atlas = ExtResource("1_6cgk1")
+region = Rect2(32, 216, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ypxb"]
+atlas = ExtResource("1_6cgk1")
+region = Rect2(32, 240, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uq6sl"]
+atlas = ExtResource("1_6cgk1")
+region = Rect2(32, 264, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2idf"]
+atlas = ExtResource("1_6cgk1")
+region = Rect2(64, 216, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bina"]
+atlas = ExtResource("1_6cgk1")
+region = Rect2(64, 240, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qmgr"]
+atlas = ExtResource("1_6cgk1")
+region = Rect2(64, 264, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yk4f"]
+atlas = ExtResource("1_6cgk1")
+region = Rect2(96, 216, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4353"]
+atlas = ExtResource("1_6cgk1")
+region = Rect2(96, 240, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ooy2"]
+atlas = ExtResource("1_6cgk1")
+region = Rect2(96, 264, 16, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dy55d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dlvdp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5duha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtyh5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ypxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uq6sl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2idf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bina")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qmgr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4yk4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4353")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ooy2")
+}],
+"loop": true,
+"name": &"all",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bina")
+}],
+"loop": true,
+"name": &"rest down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4353")
+}],
+"loop": true,
+"name": &"rest left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ypxb")
+}],
+"loop": true,
+"name": &"rest right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dlvdp")
+}],
+"loop": true,
+"name": &"rest up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2idf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qmgr")
+}],
+"loop": true,
+"name": &"walk down",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4yk4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ooy2")
+}],
+"loop": true,
+"name": &"walk left",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtyh5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uq6sl")
+}],
+"loop": true,
+"name": &"walk right",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dy55d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5duha")
+}],
+"loop": true,
+"name": &"walk up",
+"speed": 2.0
+}]

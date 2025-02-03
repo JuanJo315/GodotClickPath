@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1e757co1fny7"]
+
+[ext_resource type="PackedScene" uid="uid://cc6s2bkxldr43" path="res://scenes/terreno.tscn" id="1_r66r1"]
+[ext_resource type="PackedScene" uid="uid://cv8g7ex4rcrqs" path="res://scenes/chicken.tscn" id="3_d0a6g"]
+[ext_resource type="PackedScene" uid="uid://cxm1ydttiuh8t" path="res://scenes/cursor.tscn" id="3_wgql8"]
+
+[node name="Mapa" type="Node2D"]
+
+[node name="Terreno" parent="." instance=ExtResource("1_r66r1")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 321)
+
+[node name="Chicken2" parent="." instance=ExtResource("3_d0a6g")]
+position = Vector2(70, 93)
+
+[node name="Cursor" parent="." instance=ExtResource("3_wgql8")]

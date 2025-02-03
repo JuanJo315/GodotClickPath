@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://83c63hf0x0gg"]
+
+[ext_resource type="Script" path="res://scripts/npc_talk.gd" id="1_17dg6"]
+[ext_resource type="Texture2D" uid="uid://5w8ex2cka2pm" path="res://assets/Small-8-Direction-Characters_by_AxulArt.png" id="1_hl4uq"]
+[ext_resource type="PackedScene" uid="uid://cetc3wen1vk0l" path="res://scenes/dialogo.tscn" id="3_f7kej"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vmyt0"]
+radius = 6.5
+height = 18.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjab1"]
+atlas = ExtResource("1_hl4uq")
+region = Rect2(64, 144, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mjfdn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjab1")
+}],
+"loop": true,
+"name": &"rest down",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xqh6h"]
+radius = 20.5
+
+[node name="NPC_Talk" type="CharacterBody2D"]
+script = ExtResource("1_17dg6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 2)
+shape = SubResource("CapsuleShape2D_vmyt0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mjfdn")
+animation = &"rest down"
+
+[node name="ChatDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChatDetection"]
+position = Vector2(-0.5, 2)
+shape = SubResource("CircleShape2D_xqh6h")
+
+[node name="Dialogo" parent="." instance=ExtResource("3_f7kej")]
+
+[connection signal="body_entered" from="ChatDetection" to="." method="_on_chat_detection_body_entered"]
+[connection signal="body_exited" from="ChatDetection" to="." method="_on_chat_detection_body_exited"]
+[connection signal="dialogue_finished" from="Dialogo" to="." method="_on_dialogo_dialogue_finished"]
